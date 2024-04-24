@@ -62,6 +62,7 @@ module.exports.send_verification_email = (req, res) => {
       subject: 'Verify Your Email',
       html: `<p>This mail is just to confirm that you have registered in our website</p>`,
     };
+    console.log(mailOptions)
   
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
